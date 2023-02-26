@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-    mode:'development',
+    mode:'production',
     entry: './src/app.ts',
     output:{
         filename:'bundle.js',
@@ -13,7 +13,7 @@ module.exports = {
             {directory:path.join(__dirname)}
         ]
     },  
-    devtool: 'inline-source-map',
+    devtool: 'none',
     module:{
         rules:[
             {test:/\.ts$/, use:'ts-loader', exclude:'/node_modules/'}
